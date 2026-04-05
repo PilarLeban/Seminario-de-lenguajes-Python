@@ -1,6 +1,3 @@
-nombres = ['Valentina', 'Mateo', 'Camila', 'Santiago', 'Lucía']
-jurados = ['judge_1', 'judge_2', 'judge_3']
-
 def calculoPuntaje(punt, n):
     total = 0
     for j in jurados:
@@ -51,7 +48,7 @@ def imprimoTabla(tablaAcumuladora):
         print(c['Cocinero'],   "    |  ", c['Puntaje total'], "     |   ", c['Rondas ganadas'],
                "     |      ", c['Mejor ronda'], "      |      ", round(c['Promedio'], 2))
         
-def devuelvoTabla(rounds):
+def devuelvoTabla(rounds, nombres, jurados):
     i = 1
     tablaAcumuladora = definoTablaAcumuladora()
     for aux in rounds:
@@ -80,6 +77,6 @@ def devuelvoTabla(rounds):
         
         input(f"Fin de ronda {i}. Tocá Enter para seguir con la siguiente ronda.")
         i += 1
-    return tablaAcumuladora
+    return tablaAcumuladora 
     
 
