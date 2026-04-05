@@ -1,4 +1,4 @@
-def calculoPuntaje(punt, n):
+def calculoPuntaje(punt, n, jurados):
     total = 0
     for j in jurados:
         total += punt[n][j]
@@ -60,7 +60,7 @@ def devuelvoTabla(rounds, nombres, jurados):
         resultadosPorRonda = []
 
         for n in nombres:
-            puntajePorRonda = calculoPuntaje(punt, n)
+            puntajePorRonda = calculoPuntaje(punt, n, jurados)
             resultadosPorRonda.append([n, puntajePorRonda])#  --> [['Valentina'][24], ['Camila'][26]]
             tablaAcumuladora = acumuloPuntaje(tablaAcumuladora, n, puntajePorRonda)    
 
